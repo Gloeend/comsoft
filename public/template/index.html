@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=0.4">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link href="css/all_settings_from_header.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <section class="header_section">
+
+            <div class="left_bar_block main_block">
+
+                <a href="http://127.0.0.1:8000/" class="logoPlace">
+                    <img src="media/short_logo.svg" class="mainLogo" onerror="this.src=&quot;/static/main_site/images/short_logo.svg&quot;">
+                </a>
+                
+                <div class="showMenu">
+                    <img src="media/showButton.svg" class="showButton" onclick="checkLeftMenu()">
+                </div>
+
+                
+
+                
+
+                    <a href="http://127.0.0.1:8000/planner" class="aSet" id="aPlan">
+                        <img src="media/plannerLogo.svg" class="logoSet" data-original-title="Планировщик" title="Планировщик">
+                        <h2 class="hstyle" id="planH">Планировщик</h2>
+                    </a>
+
+                    <div class="aSet" id="aCRM">
+                        <a href="http://127.0.0.1:8000/crm" class="openUsList">
+                            <img title="CRM" src="media/CRMlogo.svg" class="logoSet">
+                            <h2 class="hstyle" id="crmH">CRM</h2>	
+                        </a>
+                        <img src="media/arrowOpen.svg" class="arrowSet">
+                        <div class="smAb" id="crmDop"><!-- дополнительное меню CRM -->
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/crm" class="hstyleDop">Сделки</a>
+                            </div>
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/company" class="hstyleDop">Компании</a>
+                            </div>
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/contacts" class="hstyleDop">Контакты</a>
+                            </div>
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/objects" class="hstyleDop">Объекты</a>
+                            </div>
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/contracts" class="hstyleDop">Договоры</a>
+                            </div>
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/commercial_offers" class="hstyleDop">Коммерческие <br> предложения</a>
+                                <a href="http://127.0.0.1:8000/create_commercial_offers"><img src="media/addSm.svg" class="addSm" title="Создать"></a>
+                            </div>
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/commercial_accounts" class="hstyleDop">Счета</a>
+                                <a href="http://127.0.0.1:8000/create_commercial_accounts"><img src="media/addSm.svg" class="addSm" title="Создать"></a>
+                            </div>
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/certificate_of_completed_works" class="hstyleDop">Акты выполненных работ</a>
+                                <a href="http://127.0.0.1:8000/create_certificate_of_completed_works"><img src="media/addSm.svg" class="addSm" title="Создать"></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="aSet" id="aWarehouse">
+                        <a href="http://127.0.0.1:8000/purchases" class="openUsList">
+                            <img title="Склад" src="media/warehouseLogo.svg" class="logoSet">
+                            <h2 class="hstyle" id="warehouseH">Склад</h2>
+                        </a>
+                        <img src="media/arrowOpen.svg" class="arrowSet">
+                        <div class="smAb" id="warehouseDop"><!-- дополнительное меню Склад -->
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/purchases" class="hstyleDop">Закупки</a>
+                            </div>
+
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/sales" class="hstyleDop">Продажи</a>							
+                            </div>
+                            
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/warehouse" class="hstyleDop">Товары</a>							
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="http://127.0.0.1:8000/tools_list" class="aSet" id="aTools">
+                        <img title="Инструменты" src="media/toolsLogo.svg" class="logoSet">
+                        <h2 class="hstyle" id="toolsH">Инструменты</h2>
+                    </a>
+                
+
+                    <div class="aSet" id="aHD">
+                        <a href="http://127.0.0.1:8000/help_desk" class="openUsList">
+                            <img title="Help Desk" src="media/HDlogo.svg" class="logoSet">
+                            <h2 class="hstyle" id="hdH">Help Desk</h2>
+                        </a>
+                        <img src="media/arrowOpen.svg" class="arrowSet">
+                        <div class="smAb" id="hdDop"><!-- дополнительное меню HelpDesk -->
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/help_desk" class="hstyleDop">Заявки</a>							
+                            </div>
+                            
+                                <div class="dopCont">
+                                    <a href="http://127.0.0.1:8000/help_desk?calendar=true" class="hstyleDop">Календарь</a>							
+                                </div>
+                                <div class="dopCont">
+                                    <a href="http://127.0.0.1:8000/help_desk?company=true" class="hstyleDop">Компании</a>							
+                                </div>
+                                <div class="dopCont">
+                                    <a href="http://127.0.0.1:8000/help_desk?users=true" class="hstyleDop">Пользователи</a>							
+                                </div>
+                                <div class="dopCont">
+                                    <a href="http://127.0.0.1:8000/help_desk?reports=true" class="hstyleDop">Отчёты</a>							
+                                </div>
+                                <div class="dopCont">
+                                    <a href="http://127.0.0.1:8000/help_desk?technic=true" class="hstyleDop">Парк техники</a>							
+                                </div>
+                            
+                        </div>
+                    </div> 
+
+                
+                    <!-- Аналитика -->
+                    <!-- <a href="/" class="aSet" id="aAnalytics">
+                        <img src="/static/main_site/images/analyticsLogo.svg" class="logoSet">
+                        <h2 class="hstyle hideH" id="analyticsH">Аналитика</h2>
+                    </a> -->
+                    <div class="aSet" id="aFinance">
+                        <a href="http://127.0.0.1:8000/finance/" class="openUsList">
+                            <img title="Финансы" src="media/finances.svg" class="logoSet">
+                            <h2 class="hstyle" id="iFinance">Финансы</h2>
+                        </a>
+                        <!-- <img src="/static/main_site/images/arrowOpen.svg" class="arrowSet">
+                        <div class="smAb" id="hdDop">
+                            <div class="dopCont">
+                                <a href="/help_desk" class="hstyleDop">Операции</a>							
+                            </div>
+                        
+                            <div class="dopCont">
+                                <a href="/help_desk?calendar=true" class="hstyleDop">Регулярные платежи</a>							
+                            </div>
+                            
+                        </div> -->
+                    </div> 
+
+                    <div class="aSet" id="aAnalytics"> 
+                        <a href="http://127.0.0.1:8000/analytics/" class="openUsList">
+                            <img title="Аналитика" src="media/analytics.svg" class="logoSet"> 
+                            <h2 class="hstyle" id="iAnalytics">Аналитика</h2> 
+                        </a> 
+                    </div>
+
+                    <div class="aSet" id="aknowBase">
+                        <a href="http://127.0.0.1:8000/base/" class="openUsList">
+                            <img title="База знаний" src="media/knowledge.svg" class="logoSet">
+                            <h2 class="hstyle" id="knowBase">База знаний</h2>
+                        </a>
+                        
+                    </div> 
+
+                    <div class="line"></div>
+
+                    <div class="aSet" id="system_manual">
+                        <a href="http://127.0.0.1:8000/manual" class="aSet">
+                            <img src="media/manual_icon.svg" alt="manual_icon" title="Документация">
+                            <h2 class="hstyle" id="manualH">Документация</h2>
+                        </a>
+                    </div>
+
+                    <div class="aSet" id="settings_menu">
+                        <a class="aSet" href="http://127.0.0.1:8000/settings">
+                            <img title="Настройки" src="media/settingsLogo.svg" class="dopLogo">
+                            <h2 class="hstyle" id="settingsH">Настройки</h2>
+                        </a>
+                    </div>
+
+                    <div class="aSet" id="update_list">
+                        <a class="aSet" href="http://127.0.0.1:8000/update_list">
+                            <img title="Список обновлений" src="media/update_list.svg" class="dopLogo">
+                            <h2 class="hstyle" id="updateH">Список обновлений</h2>
+                        </a>
+                    </div>
+
+                    <div class="line"></div>
+                    
+
+                    <div class="aSet" id="usList">
+                        <a href="http://127.0.0.1:8000/all_user_list" class="openUsList">
+                            <img title="Пользователи" src="media/userListlogo.svg" class="dopLogo">
+                            <h2 class="hstyle" id="usersH">Пользователи</h2>
+                            
+                        </a>
+                        <img src="media/addSm.svg" class="addSm" title="Создать" onclick="location.href=&#39;/add_user_page&#39;">
+                        <div class="smAb" id="userListDop"><!-- дополнительное меню Склад -->
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/all_user_list" class="hstyleDop">Полный список</a>	
+                                                        
+                            </div>
+                            <div class="dopCont">
+                                <div class="hstyleDop" onclick="open_users_list()">Быстрый просмотр</div>	
+                                                        
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+
+                    <div class="aSet" id="aTask" onclick="redirectTo(&#39;/tasks_all_list&#39;)">
+                        <img title="Задачи" src="media/taskListLogo.svg" class="dopLogo" id="taskListLogo">
+                        <h2 class="hstyle" id="taskH">Задачи</h2>
+                        <img src="media/arrowOpen.svg" class="arrowSet">
+                        <div class="smAb" id="taskDop">
+                            <div class="dopCont">
+                                <a onclick="planner__open_task_list(event)" class="hstyleDop">Быстрый просмотр</a>
+                                <a onclick="open_new_task()"><img src="media/addSm.svg" class="addSm" title="Создать"></a>
+                            </div>
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/tasks_all_list" class="hstyleDop">Список задач</a>
+                                <a onclick="open_new_task()"><img src="media/addSm.svg" class="addSm" title="Создать"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="send_error_message_cont" onclick="open_send_error()" title="Сообщить об ошибке">
+                        <img class="" src="media/error_message.svg" alt="">
+                    </div>
+
+                    <script>
+                        function redirectTo(url) {
+                            window.location.href = url;
+                        }
+                    </script>
+                    
+                
+
+                <div class="leftMenuTog">
+                    <div class="switch-btnLeft" onclick="switchThisTog(this)"></div>               
+                    <h6 class="togText" style="text-align: center; margin-top: 0px; margin-left: 8px;">Всегда скрыт</h6>
+                </div>
+
+                
+                    <div class="aSet perSet" id="aPers">
+                        <a href="http://127.0.0.1:8000/user_page/9" class="openUsList"><div class="persCont" id="avatar" style="background-color: rgb(51, 51, 51);"></div>
+                        <h2 class="hstyle" id="nameH"></h2></a>
+                        <img src="media/arrowOpen.svg" class="arrowSet">
+                        <div class="smAb" id="persDop">
+                            <div class="dopCont">
+                                <a href="http://127.0.0.1:8000/logout" class="hstyleDop" id="hLogout"><img src="media/logoutLogo.svg"><h2 class="hstyleDop">Выйти</h2></a>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            </div>
+
+            <div class="dark_block" onclick="open_close_left_menu()"></div>
+
+            <div class="up_bar_and_content_block">
+
+                <div class="up_bar_block main_block">
+
+				
+                </div>
+                <div class="content_block">
+
+                    <div class="all_for_scroll " style="height: 100%; display: flex; justify-content: center; align-items: center;">
+                        ЗДЕСЬ БУДЕТ КОНТЕНТ
+                    </div>
+                </div>
+                
+            </div>
+            
+
+        </section>
+
+        <!-- Скрытие и раскрытие левого меню -->
+        <script>
+            function checkLeftMenu() {
+                
+                let hideBtn = document.querySelector('.showButton');
+                let leftMenu = document.querySelector('.left_bar_block');
+                let content = document.querySelector('.up_bar_and_content_block');
+                let hideH = document.querySelectorAll('.hstyle');
+                let dopblock = document.querySelector('.smAb');
+
+                
+                hideBtn.classList.toggle('hideBtn');
+                content.classList.toggle('bigW');
+                leftMenu.classList.toggle('menuLow');
+                
+                for (var count = 0; count < hideH.length; count++) {
+                    hideH[count].classList.toggle('hideH')
+                }
+
+                if ($('.left_bar_block.main_block')[0].classList.contains('menuLow')) {
+                    $('.togText').css({'margin-top': '8px', 'margin-left': '0'});
+                }
+                else {
+                    $('.togText').css({'margin-top': '0', 'margin-left': '8px'});
+                }
+
+            }
+		</script>
+
+        <!-- Логика для тоггла на вечное скрытие/раскрытие левого меню -->
+        <script type="text/javascript">
+            function switchThisTog(event) {
+                
+                $(event).toggleClass('switch-onLeft');
+
+                if ($('.togText').text() === 'Всегда раскрыт') {
+
+                    $('.togText').text('Всегда скрыт');
+                    localStorage.setItem('switchState', 'closed');
+
+                    if ($('.showButton:not(.hideBtn)')) {
+                        checkLeftMenu();
+                    }
+
+                    $('.togText').css({'margin-top': '8px', 'margin-left': '0'});
+
+                } else {
+
+                    $('.togText').text('Всегда раскрыт');
+                    localStorage.setItem('switchState', 'open');
+
+                    $('.togText').css({'margin-left': '8px', 'margin-top': '0'}); // убрать отступ
+
+                    if ($('.showButton').hasClass('hideBtn')) {
+                        checkLeftMenu();
+                    }
+                }
+            }       
+                        
+            let switchState = localStorage.getItem('switchState');
+
+            if (switchState === 'open') {
+                $('.left_bar_block').css({
+                    'transition': 'none',
+                })
+
+                $('.up_bar_and_content_block ').css({
+                    'transition': 'none',
+                })
+
+                $($('.switch-btnLeft')[0]).addClass('switch-onLeft');
+                $('.togText').text('Всегда раскрыт');
+                $('.togText').css({'margin-left': '8px', 'margin-top': '0'}); // убрать отступ
+                
+                checkLeftMenu();
+                
+                
+            } else {
+                $('.switch').removeClass('switch-onLeft');
+                $('.togText').text('Всегда скрыт');
+                $('.togText').css({'margin-top': '8px', 'margin-left': '0'});
+                
+            }
+            
+        </script>
+
+    </body>
+</html>

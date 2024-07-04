@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --comsoft-transition-125: 125ms ease-out;
+  --comsoft-transition-100: 100ms ease-out;
+  --comsoft-primary: #3E4A51;
+  --comsoft-primary-hover: #5C686F;
+  --comsoft-text-primary: #CADAE4;
+  --comsoft-secondary: #525E65;
+  --comsoft-white: white;
+  --comsoft-white-50: #bfbfbf;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.iconCurrentFillPath > path {
+  fill: currentColor;
+}
+
+.iconCurrentStrokePath > path {
+  stroke: currentColor;
+}
+
+div#root {
+  //display: flex;
+  //margin: 0 auto;
+  //max-width: 678px;
+  //padding: 20px 0;
+  //height: 100vh;
+  //max-height: 100vh;
+}
+
+main {
+  width: 100%;
+  overflow: clip;
+}
+
+.scroll {
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 30px;
+  }
+}

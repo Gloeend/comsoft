@@ -1,0 +1,27 @@
+.header {
+  width: 12rem;
+  height: 100vh;
+
+  &, & .open {
+    transition: var(--comsoft-transition-125);
+  }
+
+  nav > a {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  &.active {
+    width: 3.125rem;
+  }
+  &.active .open {
+    transform: rotate(-180deg);
+  }
+}
+.open {
+  top: 65px;
+  right: -10px;
+  position: absolute;
+}
